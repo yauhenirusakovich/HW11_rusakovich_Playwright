@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:run": "npx playwright test tests/my.tests.spec.ts --headed"
+    "test:run": "npx playwright test --reporter=allure-playwright tests/my.tests.spec.ts --headed",
+    "allure:report": "allure generate allure-results --clean",
+    "allure:open": "allure open ./allure-report"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,8 @@
   "homepage": "https://github.com/yauhenirusakovich/HW11_rusekovich_playWright#readme",
   "devDependencies": {
     "@playwright/test": "^1.24.1",
+    "allure-commandline": "^2.18.1",
+    "allure-playwright": "^2.0.0-beta.18",
     "typescript": "^4.7.4"
   }
 }
